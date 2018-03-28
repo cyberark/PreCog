@@ -3,7 +3,8 @@
 Discover "HotSpots" - potential spots for credentials theft.
 
 # The main goal
-Discover and mitigate HotSpots machines in your network - those dangerous spots could be abused by attackers to steal privileged accounts credential.  
+Discover and mitigate HotSpots machines in your network - those dangerous spots could be abused by attackers to steal privileged accounts credential.
+
 Those risky spots are used by attackers for lateral movement and privilege escalation through the network until they achieved their desired “Domain Admin” credentials.
 
 # More details could be found in CyberArk's Threat Research Blog
