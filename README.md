@@ -96,9 +96,9 @@ This is the main analysis results file. There will be only one “main-liveStatu
 <p align="center">
   <img width="1000" height="85" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/6.png">
 </p>
-In the above example, we can see that there is an active Hot Spot!  
-It’s the w10-research machine. The “Administrator” account, a Tier 0 privileged account, is logged-on while in the same time there is a non-Tier 0 account that is logged-on and it has local admin rights - it’s “win10_localAdmin” account.  
-One can also notice that the machine ws-research-8.research.com is a “Cold Spot”. That is because PreCog detected that the “Administrator” account was logged-on to that computer.  
+ In the above example, we can see that there is an active Hot Spot!  
+ It’s the w10-research machine. The “Administrator” account, a Tier 0 privileged account, is logged-on while in the same time there is a   non-Tier 0 account that is logged-on and it has local admin rights - it’s “win10_localAdmin” account.  
+ One can also notice that the machine ws-research-8.research.com is a “Cold Spot”. That is because PreCog detected that the “Administrator” account was logged-on to that computer.  
 Another important thing to note is the historic spots! When a relevant sign out event log will be processed, the line of the Hot Spot will be changed to a historic spot - the term HISTORYspot will be added as a prefix to the computer name, as seen above. Moreover, the termination time of the HotSpot will be registered under the EndTime field.
 
 3.	LogsRawSavedData  
