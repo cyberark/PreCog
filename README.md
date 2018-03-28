@@ -1,6 +1,6 @@
 # PreCog
 
-Discover potential spots for credentials theft.
+Discover "HotSpots" - potential spots for credentials theft.
 
 # The main goal
 Discover and mitigate HotSpots machines in your network - those dangerous spots could be abused by attackers to steal privileged accounts credential.
