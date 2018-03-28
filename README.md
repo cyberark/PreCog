@@ -19,18 +19,17 @@ Therefore, by discovering and eliminating those HotSpots, the risk can be mitiga
 Sets how many days back the tool will analyze. By default it’s set to only analyze the past 7 mins.
 *	$eventLogCollectorName:
 Set PreCog to query a remote WEF server, $eventLogCollectorName should be the name of the remote WEF server. The default is the current machine where the script is running.
--	$sleepTime:
+*	$sleepTime:
 Sets the sleep duration time between each log reading check by the PreCog of the WEF’s logs storage. $sleepTime defines a sleeping time in seconds (by default it’s 1 second).
--	$noRawData:
+*	$noRawData:
 Switch parameter to cancel saving of the raw output file of the analyzed logs - the "LogsRawSavedData.csv" file.
--	$quietMode:
+*	$quietMode:
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
 
 # Execution command example:
--	. .\PreCog.ps1
+*	. .\PreCog.ps1
 Simple execution with default configuration.
-
--	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
+*	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
 PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (it requires the permission to read those logs, and a network connectively to that WEF server). In this configuration example, PreCog will not save the raw information of the analyzed logs, and it will be running in a quiet mode - it will only print out to the screen if there are new Cold and Hot Spots that were detected.
 
 # Full technical details
@@ -61,7 +60,7 @@ https://www.cyberark.com/threat-research-blog/shadow-admins-stealthy-accounts-fe
 
 PreCog’s first step is to check if it indeed has the Tier 0 list. If the file doesn’t exist ACLight2 will be executed. In addition - the two list of accounts - Tier 0 and Tier 1, could be modified manually, by adding the account’s details line with its name, domain and SID (the user’s Security Identifier). After PreCog loaded the accounts lists it progresses to the next step of analyzing the historic event logs. When past event logs analysis is completed, it will progress to perform live monitoring of the logs. 
 
-Let’s move forward to describe the Results folder:
+Let’s move forward to describe the **Results folder**:
  
 At first, the results folder should be empty. When the tool runs, the following csv files will be created, depends on the logs that the WEF server receives:
 (1)	Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv
