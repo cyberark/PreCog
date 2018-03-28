@@ -81,22 +81,22 @@ Let’s move forward to describe the **Results folder**:
   <img width="600" height="183" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/4.png">
 </p>
 At first, the results folder should be empty. When the tool runs, the following csv files will be created, depends on the logs that the WEF server receives:  
-
+  
 1. Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv  
 This csv file will follow the live logon sessions on each machine and will be updated automatically when those are created and terminated. The file will be first created on the first logon event that will be analyzed from that specific machine. When a sign out event log is processed, the corresponding user will be removed from the active session list in the machine’s liveConnection file.
 An example for this file live connection csv file:
 <p align="center">
   <img width="1000" height="79" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/5.png">
 </p>
-...You can see in the above example that “w10-research.research.com” machine host 3 active logon sessions (each has a unique logon ID). Two accounts are logged on, “win10_localAdmin” and “Administrator”.  
+⋅⋅⋅You can see in the above example that “w10-research.research.com” machine host 3 active logon sessions (each has a unique logon ID). Two accounts are logged on, “win10_localAdmin” and “Administrator”.  
 The liveConnection file contains more information on the monitored logged-on sessions, like: The account’s SID, domain name, time of the logged event the level of privileges associated with the account (local admin right, Tier 1 or Tier 0 privileges).  
-
+  
 2. Main-LiveStatus:  
 This is the main analysis results file. There will be only one “main-liveStatus.csv” results file. 
 <p align="center">
   <img width="1000" height="85" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/6.png">
 </p>
-... In the above example, we can see that there is an active Hot Spot!  
+⋅⋅⋅In the above example, we can see that there is an active Hot Spot!  
 It’s the w10-research machine. The “Administrator” account, a Tier 0 privileged account, is logged-on while in the same time there is a non-Tier 0 account that is logged-on and it has local admin rights - it’s “win10_localAdmin” account.  
 One can also notice that the machine ws-research-8.research.com is a “Cold Spot”. That is because PreCog detected that the “Administrator” account was logged-on to that computer.  
 Another important thing to note is the historic spots! When a relevant sign out event log will be processed, the line of the Hot Spot will be changed to a historic spot - the term HISTORYspot will be added as a prefix to the computer name, as seen above. Moreover, the termination time of the HotSpot will be registered under the EndTime field.
