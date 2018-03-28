@@ -30,7 +30,9 @@ Switch parameter used to reduce the number of messages to be printed out during 
 # Execution command example:
 *	. .\PreCog.ps1  
 Simple execution with default configuration.
-*	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode  
+'''
+*	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
+'''
 PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (it requires the permission to read those logs, and a network connectively to that WEF server). In this configuration example, PreCog will not save the raw information of the analyzed logs, and it will be running in a quiet mode - it will only print out to the screen if there are new Cold and Hot Spots that were detected.
 
 # Full technical details
@@ -40,7 +42,8 @@ PreCog queries WEF and analyzes 4 important event logs:
 *	4647 - User initiated logoff.
 *	4634 - An account was logged off.
 
-Those event logs provide the PreCog the ability to follow the logon sessions on each of the monitored machines. The tool also process a few more event logs with the intention of detecting machines that were restarted and therefore their active logon sessions list should be reset. The event IDs that imply on a machine’s restart are: 4608 - “Windows is starting up”, 6005 - “Event Log service was started”, 6006 - “The Event log service was stopped” and 6008 - "There was unexpected shutdown”.
+Those event logs provide the PreCog the ability to follow the logon sessions on each of the monitored machines.  
+The tool also process a few more event logs with the intention of detecting machines that were restarted and therefore their active logon sessions list should be reset. The event IDs that imply on a machine’s restart are: 4608 - “Windows is starting up”, 6005 - “Event Log service was started”, 6006 - “The Event log service was stopped” and 6008 - "There was unexpected shutdown”.
 
 The tool includes two folders and two scripts in its home folder. 
 A look of PreCog’s home folder:
@@ -64,7 +67,7 @@ When you start the PreCog tool it will show the privilege accounts that were loa
 </p>
 
 Note - on first execution of PreCog - the list of “Tier 0 - most privileged accounts.csv” will be created automatically! It will be done by running the “ACLight2” tool script. ACLight is a special discovery tool that will discover the network’s most sensitive privileged accounts (more information on the ACLight tool could be seen in its official GitHub page:  
-https://github.com/cyberark/ACLight
+https://github.com/cyberark/ACLight  
 And in the following blogpost:  
 https://www.cyberark.com/threat-research-blog/shadow-admins-stealthy-accounts-fear/.
 
