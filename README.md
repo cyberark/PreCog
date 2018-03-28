@@ -27,7 +27,7 @@ Switch parameter to cancel saving of the raw output file of the analyzed logs - 
 *	$quietMode:  
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
 
-# Execution command example:
+# Execution command examples:
 ```
 *	. .\PreCog.ps1
 ```
@@ -63,7 +63,8 @@ The structure of the privileged account lists:
 </p>
 PreCog correlates the AccountSID attribute from the csv lists with the SID attribute of the monitored event logs.
 
-When you start the PreCog tool it will show the privilege accounts that were loaded and will be monitored. It will look like this:
+When you start the PreCog tool it will show the privilege accounts that were loaded and will be monitored.  
+It will look like this:
 <p align="center">
   <img width="600" height="485" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/3.png">
 </p>
