@@ -57,7 +57,9 @@ The structure of the privileged account lists:
 PreCog correlates the AccountSID attribute from the csv lists with the SID attribute of the monitored event logs.
 
 When you start the PreCog tool it will show the privilege accounts that were loaded and will be monitored. It will look like this:
- 
+<p align="center">
+  <img width="600" height="485" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/3.png">
+</p>
 
 Note - on first execution of PreCog - the list of “Tier 0 - most privileged accounts.csv” will be created automatically! It will be done by running the “ACLight2” tool script. ACLight is a special discovery tool that will discover the network’s most sensitive privileged accounts (more information on the ACLight tool could be seen in its official GitHub page:
 https://github.com/cyberark/ACLight
@@ -67,17 +69,23 @@ https://www.cyberark.com/threat-research-blog/shadow-admins-stealthy-accounts-fe
 PreCog’s first step is to check if it indeed has the Tier 0 list. If the file doesn’t exist ACLight2 will be executed. In addition - the two list of accounts - Tier 0 and Tier 1, could be modified manually, by adding the account’s details line with its name, domain and SID (the user’s Security Identifier). After PreCog loaded the accounts lists it progresses to the next step of analyzing the historic event logs. When past event logs analysis is completed, it will progress to perform live monitoring of the logs. 
 
 Let’s move forward to describe the **Results folder**:
- 
+<p align="center">
+  <img width="500" height="152" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/4.png">
+</p>
 At first, the results folder should be empty. When the tool runs, the following csv files will be created, depends on the logs that the WEF server receives:
 (1)	Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv
 This csv file will follow the live logon sessions on each machine and will be updated automatically when those are created and terminated. The file will be first created on the first logon event that will be analyzed from that specific machine. When a sign out event log is processed, the corresponding user will be removed from the active session list in the machine’s liveConnection file.
 An example for this file live connection csv file:
- 
+<p align="center">
+  <img width="800" height="63" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/5.png">
+</p>
 You can see in the above example that “w10-research.research.com” machine host 3 active logon sessions (each has a unique logon ID). Two accounts are logged on, “win10_localAdmin” and “Administrator”.
 The liveConnection file contains more information on the monitored logged-on sessions, like: The account’s SID, domain name, time of the logged event the level of privileges associated with the account (local admin right, Tier 1 or Tier 0 privileges).
 (2)	Main-LiveStatus:
 This is the main analysis results file. There will be only one “main-livestatus.csv” results file. 
- 
+<p align="center">
+  <img width="800" height="68" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/6.png">
+</p>
 In the above example, we can see that there is an active Hot Spot! 
 It’s the w10-research machine. The “Administrator” account, a Tier 0 privileged account, is logged-on while in the same time there is a non-Tier 0 account that is logged-on and it has local admin rights - it’s “win10_localAdmin” account.
 One can also notice that the machine ws-research-8.research.com is a “Cold Spot”. That is because PreCog detected that the “Administrator” account was logged-on to that computer.
