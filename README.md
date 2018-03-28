@@ -45,7 +45,9 @@ A look of PreCog’s home folder:
 ![PreCog's Home Folder](https://github.com/Hechtov/Photos/blob/master/HotSpots/1.png)
 The folder “Accounts lists” includes two csv files containing the lists of the privileged accounts in Tier 0 and Tier 1. Those accounts will be monitored by the PreCog tool.
 The two csv lists are:
-![Accounts Lists](https://github.com/Hechtov/Photos/blob/master/HotSpots/2.png|ALT TEXT)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/2.png">
+</p>
 The structure of the privileged account lists:
 ![Accounts list CSV](https://github.com/Hechtov/Photos/blob/master/HotSpots/2-1.png)
 PreCog correlates the AccountSID attribute from the csv lists with the SID attribute of the monitored event logs.
