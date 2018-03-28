@@ -82,7 +82,7 @@ Let’s move forward to describe the **Results folder**:
 </p>
 At first, the results folder should be empty. When the tool runs, the following csv files will be created, depends on the logs that the WEF server receives:  
   
-  
+<br />
 1. Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv  
 This csv file will follow the live logon sessions on each machine and will be updated automatically when those are created and terminated. The file will be first created on the first logon event that will be analyzed from that specific machine. When a sign out event log is processed, the corresponding user will be removed from the active session list in the machine’s liveConnection file.
 An example for this file live connection csv file:
@@ -91,8 +91,7 @@ An example for this file live connection csv file:
 </p> 
 ⋅⋅⋅You can see in the above example that “w10-research.research.com” machine host 3 active logon sessions (each has a unique logon ID). Two accounts are logged on, “win10_localAdmin” and “Administrator”.  
 The liveConnection file contains more information on the monitored logged-on sessions, like: The account’s SID, domain name, time of the logged event the level of privileges associated with the account (local admin right, Tier 1 or Tier 0 privileges).  
-  
-  
+<br />
 2. Main-LiveStatus:  
 This is the main analysis results file. There will be only one “main-liveStatus.csv” results file. 
 <p align="center">
