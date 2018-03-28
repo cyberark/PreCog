@@ -30,9 +30,9 @@ Switch parameter used to reduce the number of messages to be printed out during 
 # Execution command example:
 *	. .\PreCog.ps1  
 Simple execution with default configuration.
-'''
+```
 *	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
-'''
+```
 PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (it requires the permission to read those logs, and a network connectively to that WEF server). In this configuration example, PreCog will not save the raw information of the analyzed logs, and it will be running in a quiet mode - it will only print out to the screen if there are new Cold and Hot Spots that were detected.
 
 # Full technical details
