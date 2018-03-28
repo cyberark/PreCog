@@ -27,17 +27,17 @@ Switch parameter to cancel saving of the raw output file of the analyzed logs - 
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
 
 # Execution command example:
-*	. .\PreCog.ps1
+*	. .\PreCog.ps1  
 Simple execution with default configuration.
-*	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
+*	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode  
 PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (it requires the permission to read those logs, and a network connectively to that WEF server). In this configuration example, PreCog will not save the raw information of the analyzed logs, and it will be running in a quiet mode - it will only print out to the screen if there are new Cold and Hot Spots that were detected.
 
 # Full technical details
 PreCog queries WEF and analyzes 4 important event logs:
-1.	4624 - An account was successfully logged on.
-2.	4672 - Special privileges assigned to new logon.
-3.	4647 - User initiated logoff.
-4.	4634 - An account was logged off.
+*	4624 - An account was successfully logged on.
+*	4672 - Special privileges assigned to new logon.
+*	4647 - User initiated logoff.
+*	4634 - An account was logged off.  
 Those event logs provide the PreCog the ability to follow the logon sessions on each of the monitored machines. The tool also process a few more event logs with the intention of detecting machines that were restarted and therefore their active logon sessions list should be reset. The event IDs that imply on a machine’s restart are: 4608 - “Windows is starting up”, 6005 - “Event Log service was started”, 6006 - “The Event log service was stopped” and 6008 - "There was unexpected shutdown”.
 
 The tool includes two folders and two scripts in its home folder. 
@@ -73,7 +73,7 @@ Let’s move forward to describe the **Results folder**:
   <img width="600" height="183" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/4.png">
 </p>
 At first, the results folder should be empty. When the tool runs, the following csv files will be created, depends on the logs that the WEF server receives:
-1. Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv  
+1.	Each of the monitored machines will have a separated csv file with the name format of: [ComputerName]-liveConnections.csv  
 This csv file will follow the live logon sessions on each machine and will be updated automatically when those are created and terminated. The file will be first created on the first logon event that will be analyzed from that specific machine. When a sign out event log is processed, the corresponding user will be removed from the active session list in the machine’s liveConnection file.
 An example for this file live connection csv file:
 <p align="center">
@@ -81,7 +81,7 @@ An example for this file live connection csv file:
 </p>
 You can see in the above example that “w10-research.research.com” machine host 3 active logon sessions (each has a unique logon ID). Two accounts are logged on, “win10_localAdmin” and “Administrator”.
 The liveConnection file contains more information on the monitored logged-on sessions, like: The account’s SID, domain name, time of the logged event the level of privileges associated with the account (local admin right, Tier 1 or Tier 0 privileges).
-2. Main-LiveStatus:  
+2.	Main-LiveStatus:  
 This is the main analysis results file. There will be only one “main-liveStatus.csv” results file. 
 <p align="center">
   <img width="1000" height="85" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/6.png">
@@ -90,7 +90,7 @@ In the above example, we can see that there is an active Hot Spot!
 It’s the w10-research machine. The “Administrator” account, a Tier 0 privileged account, is logged-on while in the same time there is a non-Tier 0 account that is logged-on and it has local admin rights - it’s “win10_localAdmin” account.
 One can also notice that the machine ws-research-8.research.com is a “Cold Spot”. That is because PreCog detected that the “Administrator” account was logged-on to that computer.
 Another important thing to note is the historic spots! When a relevant sign out event log will be processed, the line of the Hot Spot will be changed to a historic spot - the term HISTORYspot will be added as a prefix to the computer name, as seen above. Moreover, the termination time of the HotSpot will be registered under the EndTime field.
-3. LogsRawSavedData  
+3.	LogsRawSavedData  
 This is a raw file with all the event logs that PreCog analyzed. The file isn’t needed for the standard operation tasks. 
-4. ACLight folder  
+4.	ACLight folder  
 The folder will include the results of the ACLight2 if it was executed properly at the initial step of PreCog (to build the Tier 0 account list).
