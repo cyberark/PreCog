@@ -15,9 +15,9 @@ The analysis identifies machine HotSpots that have open logon sessions from both
 Therefore, by discovering and eliminating those HotSpots, the risk can be mitigated and future possible credentials theft attempts are prevented.
 
 # PreCog’s optional parameters:
--	$days:
+*	$days:
 Sets how many days back the tool will analyze. By default it’s set to only analyze the past 7 mins.
--	$eventLogCollectorName:
+*	$eventLogCollectorName:
 Set PreCog to query a remote WEF server, $eventLogCollectorName should be the name of the remote WEF server. The default is the current machine where the script is running.
 -	$sleepTime:
 Sets the sleep duration time between each log reading check by the PreCog of the WEF’s logs storage. $sleepTime defines a sleeping time in seconds (by default it’s 1 second).
