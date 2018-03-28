@@ -28,7 +28,9 @@ Switch parameter to cancel saving of the raw output file of the analyzed logs - 
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
 
 # Execution command example:
-*	. .\PreCog.ps1  
+```
+*	. .\PreCog.ps1
+```
 Simple execution with default configuration.
 ```
 *	. .\PreCog.ps1 -eventLogCollectorName RemoteWEF-Name -noRawData -quietMode
