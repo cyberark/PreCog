@@ -48,7 +48,7 @@ A look of PreCog’s home folder:
 The folder “Accounts lists” includes two csv files containing the lists of the privileged accounts in Tier 0 and Tier 1. Those accounts will be monitored by the PreCog tool.
 The two csv lists are:
 <p align="center">
-  <img width="1307" height="602" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/2.png">
+  <img width="390" height="128" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/2.png">
 </p>
 The structure of the privileged account lists:
 <p align="center">
