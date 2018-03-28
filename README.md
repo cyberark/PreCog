@@ -16,14 +16,19 @@ Therefore, by discovering and eliminating those HotSpots, the risk can be mitiga
 
 # PreCog’s optional parameters:
 -	$days:
+
 Sets how many days back the tool will analyze. By default it’s set to only analyze the past 7 mins.
 -	$eventLogCollectorName:
+
 Set PreCog to query a remote WEF server, $eventLogCollectorName should be the name of the remote WEF server. The default is the current machine where the script is running.
 -	$sleepTime:
+
 Sets the sleep duration time between each log reading check by the PreCog of the WEF’s logs storage. $sleepTime defines a sleeping time in seconds (by default it’s 1 second).
--	$noRawData,
+-	$noRawData:
+
 Switch parameter to cancel saving of the raw output file of the analyzed logs - the "LogsRawSavedData.csv" file.
 -	$quietMode:
+
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
 
 # Execution command example:
