@@ -39,7 +39,7 @@ PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (
   
 
 <br />  
-<br />  
+<br />
 # Full technical details
 PreCog queries WEF and analyzes 4 important event logs:
 *	4624 - An account was successfully logged on.
