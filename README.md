@@ -42,12 +42,12 @@ Those event logs provide the PreCog the ability to follow the logon sessions on 
 
 The tool includes two folders and two scripts in its home folder. 
 A look of PreCog’s home folder:
- 
+![PreCog's Home Folder](https://github.com/Hechtov/Photos/blob/master/HotSpots/1.png)
 The folder “Accounts lists” includes two csv files containing the lists of the privileged accounts in Tier 0 and Tier 1. Those accounts will be monitored by the PreCog tool.
 The two csv lists are:
- 
+![Accounts Lists](https://github.com/Hechtov/Photos/blob/master/HotSpots/2.png)
 The structure of the privileged account lists:
- 
+![Accounts list CSV](https://github.com/Hechtov/Photos/blob/master/HotSpots/3.png)
 PreCog correlates the AccountSID attribute from the csv lists with the SID attribute of the monitored event logs.
 
 When you start the PreCog tool it will show the privilege accounts that were loaded and will be monitored. It will look like this:
