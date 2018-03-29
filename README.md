@@ -8,7 +8,8 @@ Discover and mitigate HotSpots machines in your network - those dangerous spots 
 Those risky spots are used by attackers for lateral movement and privilege escalation through the network until they achieved their desired “Domain Admin” credentials.
 
 # More details could be found in CyberArk's Threat Research Blog
-
+Share your thoughts with us:  
+Lavi Lazarovitz ([@LaviLazarovitz](https://twitter.com/LaviLazarovitz)) Asaf Hecht ([@Hechtov](https://twitter.com/Hechtov))
 # Tool description
 What is PreCog?  
 PreCog is a PowerShell tool aimed to implement credentials theft precognition by detecting HotSpots in the network. The tool analyzes event logs from domain connected machines through WEF (Windows Event Forwarding) server and follows the privileged account activity on those machines.  
