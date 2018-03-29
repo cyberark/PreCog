@@ -10,6 +10,8 @@ Those risky spots are used by attackers for lateral movement and privilege escal
 # More details could be found in CyberArk's Threat Research Blog
 Share your thoughts with us:  
 Lavi Lazarovitz ([@LaviLazarovitz](https://twitter.com/LaviLazarovitz)), Asaf Hecht ([@Hechtov](https://twitter.com/Hechtov))
+*********************************************************************************************
+#############################################################################################
 # Tool description
 What is PreCog?  
 PreCog is a PowerShell tool aimed to implement credentials theft precognition by detecting HotSpots in the network. The tool analyzes event logs from domain connected machines through WEF (Windows Event Forwarding) server and follows the privileged account activity on those machines.  
@@ -39,7 +41,8 @@ Simple execution with default configuration.
 PreCog will be executed and fetch the event logs from the “RemoteWEF-Name” (it requires the permission to read those logs, and a network connectively to that WEF server). In this configuration example, PreCog will not save the raw information of the analyzed logs, and it will be running in a quiet mode - it will only print out to the screen if there are new Cold and Hot Spots that were detected.
 <br />
 <br />
-****************************************************************************************************************************************
+*********************************************************************************************
+#############################################################################################
 #############################################################################################
 <br />
 <br />
