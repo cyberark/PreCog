@@ -99,7 +99,7 @@ You can see in the above example that “w10-research.research.com” machine ho
 The liveConnection file contains more information on the monitored logged-on sessions, like: The account’s SID, domain name, time of the logged event the level of privileges associated with the account (local admin right, Tier 1 or Tier 0 privileges).  
    
   2. **Main-LiveStatus:**  
-This is the main analysis results file. There will be only one **“main-liveStatus.csv”** results file. 
+This is the main analysis results file. There will be only one **“Main-LiveStatus.csv”** results file. 
 <p align="center">
   <img width="1000" height="85" src="https://github.com/Hechtov/Photos/blob/master/HotSpots/6.png">
 </p> 
