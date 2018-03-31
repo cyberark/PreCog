@@ -73,7 +73,7 @@ Param (
     $logFolderName = 'ForwardedEvents'
 )
 
-$version = "v1.6"
+$version = "v1.7"
 
 ##Requires -Version 3.0 or above
 #check the powershell version
