@@ -1,0 +1,4 @@
+Computer,Color,TierLevel,PrivilegedAccountAtRisk,MightStolenBy,LogonID,StartTime,EndTime,Workstation,IP,LoggedOnUsers
+w81-research.research.com,ColdSpot,Tier0-LoggedOn,administrator,,0x4f411b6,1522240250,-,,,
+HISTORYspot->server2016-research.research.com<-OLD,HotSpot,Tier0-HighestRisk,domainadmin,win2016_localadmin,0x5ca57,1518014943,1518014980.04392->From:02/07/2018 15:09:02->1237seconds,,,
+w10-research.research.com,HotSpot,Tier0-HighestRisk,administrator,win10_localadmin,0x4fd5359,1522240294,AtRisk,,,
