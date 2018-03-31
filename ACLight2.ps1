@@ -76,7 +76,6 @@ THE RESULTS FILES:
 4) "Privileged Accounts Permissions - Irregular Accounts.csv" - Similar to the final report just with only the privileged accounts that have direct permissions (not through their group membership).
 5) "research.com - Full Output.csv" - Every domain that was scanned will have a csv with more raw results of the ACLs.
 
-
 ----------------------------------------------------------------------------------------------------#>
 
 ##Requires -Version 3.0 or above
