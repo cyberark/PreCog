@@ -97,7 +97,7 @@ ______         _____
 "@
 
 $Authors = @"
-Authors: Lavi Lazarovitz - @LaviLazarovitz,   Asaf Hecht - @hechtov
+Authors: Lavi Lazarovitz - @LaviLazarovitz,   Asaf Hecht - @Hechtov
                       
                       Cyberark Labs research team
 
