@@ -945,7 +945,7 @@ function Start-DetectionProcess {
         # 4647: User initiated logoff
         # option to use "TimeCreated[timediff(@SystemTime) <= 10000]" to get events in the last 10 seconds.
 
-        $eventLogs = Get-WinEvent -ComputerName $eventLogCollectorName -FilterHashtable @{logname=$logFolderName;id=4624,4672,4634,4647,6005,6006,6009,6013,4608; StartTime=$lastRefreshTime} -erroraction 'silentlycontinue' 
+        $eventLogs = Get-WinEvent -ComputerName $eventLogCollectorName -FilterHashtable @{logname=$logFolderName;id=4624,4672,4634,4647,6005,6006,6009,4608; StartTime=$lastRefreshTime} -erroraction 'silentlycontinue' 
         if ($eventLogs) {
             [array]::Reverse($eventLogs)
             foreach ($eventObject in $eventLogs) {
