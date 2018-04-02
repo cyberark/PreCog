@@ -383,7 +383,7 @@ function Get-StatusInfo {
         $machineInfo,
         $logonUserInfo
     )
-    $liveStatusLine = "" | select Computer,Color,TierLevel,PrivilegedAccountAtRisk,MightStolenBy,LogonID,StartTime,EndTime,Workstation,IP,LoggedOnUsers
+    $liveStatusLine = "" | select Computer,Color,TierLevel,PrivilegedAccountAtRisk,MightStolenBy,LogonID,StartTime,EndTime,Workstation,IP
     $liveStatusLine.Computer = $logonUserInfo.computer
     #if not start:
     $liveStatusLine.StartTime = $logonUserInfo.logOnStartTime
@@ -393,7 +393,6 @@ function Get-StatusInfo {
     $liveStatusLine.LogonID = $logonUserInfo.logonID
     $liveStatusLine.workstation = $logonUserInfo.workstation
     $liveStatusLine.IP = $logonUserInfo.IP
-    $LoggedOnUsers = @()
 
     return $liveStatusLine
 }
@@ -1065,10 +1064,10 @@ if ($tier1EnableScan) {
     }
 }
 
+$accountListTier1DB = @{}
 if (Test-Path $tier1PrivilegedListPath)
 {
     $accountListTier1 = Import-Csv $tier1PrivilegedListPath | select "AccountName", "AccountSID" -Unique 
-    $accountListTier1DB = @{}
     $accountListTier1 | foreach {
         $accountListTier1DB.add($_.AccountSID, $_.AccountName)
     }
