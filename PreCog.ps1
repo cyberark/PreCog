@@ -765,7 +765,7 @@ function Analyze-liveConnections {
         return $false
     }
     # check if there are events that might point out that the machine is probably after a restart, then we reset the machine's connections (it's for reducing FP rates)
-    if (($logInfoObject.EventID -eq "4608") -or ($logInfoObject.EventID -eq "6005") -or ($logInfoObject.EventID -eq "6006") -or ($logInfoObject.EventID -eq "6009") -or ($logInfoObject.EventID -eq "6013")) {
+    if (($logInfoObject.EventID -eq "4608") -or ($logInfoObject.EventID -eq "6005") -or ($logInfoObject.EventID -eq "6006") -or ($logInfoObject.EventID -eq "6008") -or ($logInfoObject.EventID -eq "6009")) {
         try {
             "" |  out-file $liveConnectionCompPath
             $computerLiveConnectionInfo = Get-LoggedOnInfoLine -logInfoObject $logInfoObject
@@ -945,7 +945,7 @@ function Start-DetectionProcess {
         # 4647: User initiated logoff
         # option to use "TimeCreated[timediff(@SystemTime) <= 10000]" to get events in the last 10 seconds.
 
-        $eventLogs = Get-WinEvent -ComputerName $eventLogCollectorName -FilterHashtable @{logname=$logFolderName;id=4624,4672,4634,4647,6005,6006,6009,4608; StartTime=$lastRefreshTime} -erroraction 'silentlycontinue' 
+        $eventLogs = Get-WinEvent -ComputerName $eventLogCollectorName -FilterHashtable @{logname=$logFolderName;id=4624,4672,4634,4647,6005,6006,6008,6009,4608; StartTime=$lastRefreshTime} -erroraction 'silentlycontinue' 
         if ($eventLogs) {
             [array]::Reverse($eventLogs)
             foreach ($eventObject in $eventLogs) {
