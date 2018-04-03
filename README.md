@@ -29,6 +29,8 @@ Sets the sleep duration time between each log reading check by the PreCog of the
 Switch parameter to cancel saving of the raw output file of the analyzed logs - the "LogsRawSavedData.csv" file.
 *	$quietMode:  
 Switch parameter used to reduce the number of messages to be printed out during the tool’s execution window. In the regular operation mode the tool will print out each event log that was processed with few more information like the account name, computer and logonID.
+* $logFolderName:  
+The channel name of the forwarded logs, by default it's the regular built-in "ForwardedEvents" channel.
 
 # Execution command examples:
 ```
