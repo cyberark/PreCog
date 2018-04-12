@@ -7,7 +7,9 @@ Discover and mitigate HotSpots machines in your network - those dangerous spots 
 
 Those risky spots are used by attackers for lateral movement and privilege escalation through the network until they achieved their desired “Domain Admin” credentials.
 
-# More details could be found in CyberArk's Threat Research Blog
+More details could be found in our blog post:
+https://www.cyberark.com/threat-research-blog/predicting-risk-credential-theft-foresight/
+
 Share your thoughts with us:  
 Lavi Lazarovitz ([@LaviLazarovitz](https://twitter.com/LaviLazarovitz)), Asaf Hecht ([@Hechtov](https://twitter.com/Hechtov))
 *********************************************************************************************
